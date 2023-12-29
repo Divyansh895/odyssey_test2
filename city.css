@@ -1,0 +1,261 @@
+html {
+    font-size: 62.5%;
+  }
+  
+  body {
+    background: #1d1a1a;
+  }
+  
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  h3 {
+    font-size: 2.3rem; 
+    font-weight: 500;
+    margin: 0;
+    font-family: "Libre Baskerville", serif;
+    color: rgb(0, 0, 0);
+    
+  }
+  
+  ::-moz-selection {
+    color: #092539;
+    background: #df0303;
+  }
+  
+  ::selection {
+    color: #000000;
+    background: #ffffff;  
+  }
+  
+  .white-stripe {
+    background: rgb(235, 164, 12);
+    text-align: center;
+    padding: 35px 0;
+  }
+  .white-stripe p {
+    margin-bottom: 0;
+  }
+  
+  .white-stripe.arrow { 
+    position: relative;
+  }
+  .white-stripe.arrow::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #ffffff;
+    clear: both;
+    margin-left: -20px;
+    z-index: 10;
+  }
+  
+  .timeline {
+    position: relative;
+    padding: 100px 0;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+  }
+  .timeline .row {
+    margin-bottom: 50px;
+  }
+  @media only screen and (min-width: 768px) {
+    .timeline .row {
+      margin-bottom: 30px;
+    }
+  }
+  .timeline::before {
+    /* this is the vertical line */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -2px;
+    height: 100%;
+    width: 3px;
+    background: #e9b303;
+    z-index: -2;
+  }
+  .timeline .country-block {
+    padding: 50px 0;
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: #ffffff;
+    background: rgba(84, 84, 84, 0.6);
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+  .timeline .country-block i {
+    content: "";
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    -moz-transition: background-size 0.3s;
+    -webkit-transition: background-size 0.3s;
+    transition: background-size 0.3s;
+  }
+  .timeline .country-block i.jp {
+    background-image: url("https://images.pexels.com/photos/1108701/pexels-photo-1108701.jpeg?auto=compress&cs=tinysrgb&w=600");
+    border-radius: 5px;      
+  }
+  .timeline .country-block i.vt {
+    background-image: url("https://images.unsplash.com/photo-1528127269322-539801943592?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dmlldG5hbXxlbnwwfDB8MHx8fDA%3D");
+    border-radius: 5px;  
+  }
+  .timeline .country-block i.cb {
+    background-image: url("https://images.unsplash.com/photo-1580655653885-65763b2597d0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bG9zJTIwYW5nZWxlc3xlbnwwfDB8MHx8fDA%3D"); 
+    border-radius: 5px; 
+  }
+  .timeline .country-block i.th {       
+    background-image: url("https://images.pexels.com/photos/472309/pexels-photo-472309.jpeg?auto=compress&cs=tinysrgb&w=600");
+    border-radius: 5px; 
+  }
+  .timeline .country-block i.ml {
+    background-image: url("https://images.unsplash.com/photo-1600450575743-43793ba079d3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHVhZXxlbnwwfDB8MHx8fDA%3D"); 
+    border-radius: 5px; 
+  } 
+  .timeline .country-block i.in {
+    background-image: url("https://images.unsplash.com/photo-1583395838144-09c70d270bda?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGJhcmNlbG9uYXxlbnwwfDB8MHx8fDA%3D");
+    border-radius: 5px; 
+  }
+  .timeline .country-block i.gr {
+    background-image: url("https://images.pexels.com/photos/19236025/pexels-photo-19236025/free-photo-of-eiffel-tower-and-seine-at-night.jpeg?auto=compress&cs=tinysrgb&w=600");
+    border-radius: 5px; 
+  }
+  .timeline .country-block i.rv {
+    background-image: url("https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"); 
+    border-radius: 5px; 
+  }
+  @media only screen and (min-width: 768px) {
+    .timeline .country-block {
+      width: 48%;
+      margin-right: 2%;
+    }
+    .timeline .country-block::before, .timeline .country-block::after {
+      content: "";
+      position: absolute;
+      right: -1px;
+      height: 50%;
+      padding-left: 3%;
+      background: rgb(226, 152, 40);
+      -ms-transform-origin: 100% 0;
+      -webkit-transform-origin: 100% 0; 
+      transform-origin: 100% 0;
+      border-radius: 10px;  
+    }
+    .timeline .country-block::before {
+      bottom: 50%;
+      -ms-transform: skewY(45deg);
+      -webkit-transform: skewY(45deg);
+      transform: skewY(45deg);
+    }
+    .timeline .country-block::after {
+      top: 50%;
+      -ms-transform: skewY(-45deg);
+      -webkit-transform: skewY(-45deg);
+      transform: skewY(-45deg);
+    }
+    .timeline .country-block.reverse {
+      margin-left: 2%;
+      margin-right: 0;
+    }
+    .timeline .country-block.reverse::before, .timeline .country-block.reverse::after {
+      left: -1px;
+      right: auto;
+      -ms-transform-origin: 0 100%;
+      -webkit-transform-origin: 0 100%;
+      transform-origin: 0 100%;
+    }
+    .timeline .country-block.reverse::before {
+      bottom: 50%;
+      -ms-transform: skewY(-45deg);
+      -webkit-transform: skewY(-45deg);
+      transform: skewY(-45deg);
+    }
+    .timeline .country-block.reverse::after {
+      top: 50%;
+      -ms-transform: skewY(45deg);
+      -webkit-transform: skewY(45deg);
+      transform: skewY(45deg);
+    }
+  }
+  .timeline a:hover, .timeline a:focus {
+    text-decoration: none;
+  }
+  .timeline a:hover .country-block {
+    background: rgba(0, 0, 0, 0.747);
+    color: #daa815;
+    font-size: 3em; 
+    text-decoration:double;
+  }
+  a{
+    transition: color 0.3s ease-in-out;
+  }
+  .timeline a:hover .country-block i {
+    background-size: 110%;
+  }
+  .timeline .date-block > div {
+    position: relative;
+    font-family: "Libre Baskerville", serif;
+    background-color: #edbb91; 
+    padding: 10px 30px 10px 30px;
+    display: inline-block;
+    margin-top: 15px;
+    border-radius: 6px; 
+  }
+  @media only screen and (min-width: 768px) {
+    .timeline .date-block > div {
+      margin-top: 50px;
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    .timeline .date-block::before {
+      content: "";
+      position: absolute;
+      top: 60px;
+      left: -10px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 4px solid #7d7d7d;
+      background: #000000;
+      box-shadow: 0 0 0 5px #f2f2f2;
+      z-index: 10;
+    }
+    .timeline .date-block::after {
+      content: "";
+      position: absolute;
+      top: 70px;
+      left: 0;
+      width: 50%;
+      height: 3px;
+      background: #c29d23;
+      z-index: -1;
+    }
+    .timeline .date-block.reverse::before {
+      right: -10px;
+      left: auto;
+    }
+    .timeline .date-block.reverse::after {
+      right: 0;
+      left: auto;
+    }
+  }

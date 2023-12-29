@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Mountains</title> 
+  <link rel="stylesheet" href="./mountain.css"> 
+  <link rel="shortcut icon" type="x-icon" href="icon.png">  
+ 
+</head> 
+ 
+
+<body>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+<!--card-carousel-->
+
+  <main> 
+    <ul class='slider'>
+    <li class='item' style="background-image: url('https://cdn.pixabay.com/photo/2014/10/26/03/35/mount-rainer-503420_1280.jpg')">
+      <div class='content'>
+        <h2 class='title'>Mount Rainer</h2>
+        <p class='description'>
+          Mount Rainier, a majestic stratovolcano in Washington, USA, reaching 4,392 meters, showcases glaciers, subalpine meadows, and stunning alpine scenery.
+        </p>
+        <button  onclick="navigateTo('rainer.html')">Read More</button>      
+      </div>
+    </li>
+     
+      <li class='item' style="background-image: url('https://images.unsplash.com/photo-1509023464722-18d996393ca8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')">
+        <div class='content'>
+          <h2 class='title'>Mount Fuji</h2>
+          <p class='description'>Mount Fuji, Japan's iconic stratovolcano, stands at 3,776 meters. Sacred, picturesque, and culturally significant, it attracts millions of visitors annually.</p>
+          <button onclick="navigateTo('fuji.html')">Read More</button>
+        </div>
+      </li> 
+      <li class='item' style="background-image: url('https://images.unsplash.com/photo-1518729571365-9a891a9df2bd?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"> 
+        <div class='content'> 
+          <h2 class='title'>Mount Kilimanjaro</h2>
+          <p class='description'>Mount Kilimanjaro, Africa's highest peak at 5,895 meters, boasts diverse ecosystems, glaciers, and challenging treks, drawing global adventurers.</p>
+          <button onclick="navigateTo('kilimanjaro.html')">Read More</button>
+        </div>
+      </li>
+        <li class='item' style="background-image: url('https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80')">
+        <div class='content'>
+          <h2 class='title'>Mount Everest</h2>
+          <p class='description'>Mount Everest, Earth's tallest peak at 8,848 meters, sits in the Himalayas, captivating climbers with its awe-inspiring stature and challenges.</p>
+          <button onclick="navigateTo('everest.html')">Read More</button>   
+        </div>  
+      </li> 
+       
+      
+      
+     
+    </ul>
+    <nav class='nav'>
+      <ion-icon class='btn prev' name="arrow-back-outline"></ion-icon>
+      <ion-icon class='btn next' name="arrow-forward-outline"></ion-icon>
+    </nav>
+  </main>
+     
+  <!--Home Button--> 
+  <button id="home" onclick="navigateTo('main.html')">Home</button> 
+<!-------------------------------------------------------------------------->
+
+<!--video loading screen-->
+ <div class="loading">
+  </div>
+  <div id="video-container">
+    <video id="intro-video" autoplay muted>
+      <source src="Loading_video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+<!--------------------------------------------------->
+
+
+  
+<style>
+  /*Video-loader*/ 
+     video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 9999;
+      animation: fadeInOut 5s ease-in-out forwards;
+    }
+    #video-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 9998;
+    }
+    
+    @keyframes fadeInOut {
+      0% {
+        opacity: 1;
+      }
+      80% { 
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    } 
+/*----------------------------------------------------------------------*/ 
+</style> 
+
+<script>
+  
+//------------------------------------------------------------------------------------------------------------//       
+document.addEventListener("DOMContentLoaded", function() {
+    var loaderWrapper = document.querySelector(".loading");
+    var videoContainer = document.getElementById("video-container");
+    var introVideo = document.getElementById("intro-video");
+
+  
+    loaderWrapper.style.display = "none";
+    videoContainer.style.display = "block";
+    introVideo.play();
+
+    
+    setTimeout(function() {
+      introVideo.pause(); 
+      videoContainer.style.display = "none";
+      document.body.style.overflow = "visible"; 
+    }, 5000);
+
+
+    introVideo.addEventListener("ended", function() {
+      videoContainer.style.display = "none";
+      document.body.style.overflow = "visible";
+    });
+  });
+
+//------------------------------------------------------------------------------------------------------------//
+
+function navigateTo(page) {
+    window.location.href = page;
+  } 
+</script> 
+
+</body>
+
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<!-- partial -->
+  <script  src="./mountain.js"></script> 
+
+
+</html>

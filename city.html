@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Cities</title> 
+  <link rel="shortcut icon" type="x-icon" href="icon.png">  
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Libre+Baskerville:400,400italic' rel='stylesheet' type='text/css'><link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'><link rel="stylesheet" href="./city.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!--loader-->
+
+
+<!--video loading screen-->
+<div class="loading">
+</div>
+<div id="video-container">
+  <video id="intro-video" autoplay muted>
+    <source src="Loading_video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div> 
+<!---------------------------------------------------> 
+
+  
+
+<section class="white-stripe arrow">    
+ <div class="container">        
+  <h3>Destinations</h3>
+ </div>
+</section>
+<section class="timeline">
+            <div class="container">                
+                <div class="row">
+                    <a href="japan_vid.html"> 
+                        <div class="country-block col-sm-6">
+                            <i class="jp"></i>
+                            Japan
+                        </div>
+                    </a>
+                    <div class="date-block col-sm-6">
+                        <div>10 October - 20 October</div>
+                    </div>                    
+                </div>
+                <div class="row">
+                    <a href="vietnam_vid.html"> 
+                        <div class="country-block reverse col-sm-6 col-sm-push-6">
+                            <i class="vt"></i>
+                            Vietnam
+                        </div>
+                    </a>                        
+                    <div class="date-block reverse col-sm-6 col-sm-pull-6">
+                        <div>21 October - 31 October</div>
+                    </div>                                    
+                </div>
+                <div class="row"> 
+                    <a href="usa_vid.html">
+                        <div class="country-block cb col-sm-6">
+                            <i class="cb"></i>
+                            usa
+                        </div>
+                    </a> 
+                    <div class="date-block col-sm-6">
+                        <div>1 November - 11 November</div>
+                    </div>                    
+                </div> 
+                <div class="row">        
+                    <a href="thailand_vid.html">
+                        <div class="country-block reverse col-sm-6 col-sm-push-6">
+                            <i class="th"></i>
+                            Thailand
+                        </div>
+                    </a>                  
+                    <div class="date-block reverse col-sm-6 col-sm-pull-6">
+                        <div>12 November - 23 November</div>
+                    </div>                                       
+                </div>
+                <div class="row">
+                    <a href="uae_vid.html">
+                        <div class="country-block col-sm-6">
+                            <i class="ml"></i>
+                            uae
+                        </div>
+                    </a>
+                    <div class="date-block col-sm-6">
+                        <div>24 November - 1 December</div>
+                    </div>                    
+                </div>
+                <div class="row">  
+                    <a href="spain_vid.html">
+                        <div class="country-block reverse col-sm-6 col-sm-push-6">
+                            <i class="in"></i>
+                            Spain 
+                        </div>
+                    </a>                   
+                    <div class="date-block reverse col-sm-6 col-sm-pull-6">
+                        <div>2 December - 12 December</div> 
+                    </div>                                       
+                </div> 
+                <div class="row"> 
+                    <a href="france_vid.html">
+                        <div class="country-block tr col-sm-6">
+                            <i class="gr"></i>
+                            France
+                        </div>
+                    </a>
+                    <div class="date-block col-sm-6">
+                        <div>12 December - 23 December</div>
+                    </div>                    
+                </div>        
+                <div class="row">  
+                    <a> 
+                        <div class="country-block reverse col-sm-6 col-sm-push-6">
+                            <i class="rv"></i>
+                            To be Revealed!
+                        </div>
+                    </a>                    
+                    <div class="date-block reverse col-sm-6 col-sm-pull-6">
+                        <div>Upcoming</div> 
+                    </div>                                       
+                </div>
+
+
+                
+            </div>
+        </section>
+<!-- partial -->
+
+  
+  <button id="return" onclick="navigateTo('main.html')">Home</button> 
+  
+ 
+
+  <style>
+    
+    button {
+    width: fit-content;
+    background-color: rgba(0,0,0,0.1);
+    color: white;
+    border: 2px solid white;
+    border-radius: 0.25rem;
+    padding: 0.75rem;
+    cursor: pointer;
+    }
+
+
+button {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  margin: 20px;
+  transition:  all 0.5s;  
+}
+
+button:hover{
+  box-shadow: 5px 5px 5px rgb(0, 255, 234);
+  font-size: 20px;    
+
+} 
+
+/* Hide the scrollbar */
+body::-webkit-scrollbar {
+    width: 0.01em; 
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+  
+  /* For Firefox */
+  body {
+    scrollbar-width: thin;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+/*Video-loader*/ 
+video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 9999;
+      animation: fadeInOut 5s ease-in-out forwards;
+    }
+    #video-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 9998;
+    }
+    
+    @keyframes fadeInOut {
+      0% {
+        opacity: 1;
+      }
+      80% { 
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    } 
+/*----------------------------------------------------------------------*/ 
+
+
+ 
+  </style>
+   
+
+<script>
+    
+//------------------------------------------------------------------------------------------------------------//       
+document.addEventListener("DOMContentLoaded", function() {
+    var loaderWrapper = document.querySelector(".loading");
+    var videoContainer = document.getElementById("video-container");
+    var introVideo = document.getElementById("intro-video");
+
+  
+    loaderWrapper.style.display = "none";
+    videoContainer.style.display = "block";
+    introVideo.play();
+
+    
+    setTimeout(function() {
+      introVideo.pause(); 
+      videoContainer.style.display = "none";
+      document.body.style.overflow = "visible"; 
+    }, 5000);
+
+
+    introVideo.addEventListener("ended", function() {
+      videoContainer.style.display = "none";
+      document.body.style.overflow = "visible"; 
+    });
+  });
+
+//------------------------------------------------------------------------------------------------------------//
+  
+
+function navigateTo(url) {
+      window.location.href = url;
+    } 
+</script>
+
+ 
+</body>
+</html>
